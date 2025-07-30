@@ -1,0 +1,22 @@
+networks:
+  mercorsymanticsearch_net:
+    driver: bridge
+
+services:
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: postgres
+      POSTGRES_HOST: localhost
+      POSTGRES_PORT: 5432
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - mercorsymanticsearch_net
+volumes:
+  postgres_data:

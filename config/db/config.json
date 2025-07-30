@@ -1,0 +1,8 @@
+{
+    "user_name": "postgres",
+    "password": "1234",
+    "host": "localhost",
+    "port": 5432,
+    "database": "postgres",
+    "connection_string": "postgresql+psycopg2://{user_name}:{password}@{host}:{port}/{database}"
+}
